@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Стол",
+      "type": 0,
+      "weight": 10,
+      "cost": 3000,
+      "amount": 349,
+      "articul": "С-93734",
+      "manufacture": "Испания"
+    },
+    {
+      "id": 2,
+      "name": "Диван",
+      "type": 0,
+      "weight": "90",
+      "cost": 8000,
+      "amount": 322,
+      "articul": "Т-013455",
+      "manufacture": "Россия"
+    },
+    {
+      "id": 3,
+      "name": "Кофеварка",
+      "type": 1,
+      "weight": "2",
+      "cost": "30000",
+      "amount": 193,
+      "articul": "К-1245",
+      "manufacture": "Италия"
+    },
+    {
+      "id": 4,
+      "name": "Телевизор",
+      "type": 1,
+      "weight": "5",
+      "cost": "70000",
+      "amount": "324",
+      "articul": "Т-013455",
+      "manufacture": "Россия"
+    },
+    {
+      "id": 5,
+      "name": "Гарри Поттер",
+      "type": 2,
+      "weight": "0.2",
+      "cost": "400",
+      "amount": 2934,
+      "articul": "Г-013455",
+      "manufacture": "Китай"
+    },
+    {
+      "id": 6,
+      "name": "Война и мир",
+      "type": 2,
+      "weight": "1",
+      "cost": "100",
+      "amount": 23547,
+      "articul": "В-013455",
+      "manufacture": "Китай"
+    },
+    {
+      "id": 7,
+      "name": "Samsung",
+      "type": 3,
+      "weight": "0.4",
+      "cost": "90000",
+      "amount": 8473,
+      "articul": "С-013455",
+      "manufacture": "Корея"
+    },
+    {
+      "id": 8,
+      "name": "Nokia",
+      "type": 3,
+      "weight": "3",
+      "cost": "19000",
+      "amount": 12345,
+      "articul": "Н-013455",
+      "manufacture": "Финляндия"
+    }
+  ]
+}

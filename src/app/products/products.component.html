@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <app-addform-products
+                (addProduct)="onAddProduct($event)"
+            ></app-addform-products>
+            <app-table-products
+                [title]="'Мебель'"
+                [products]="getByType(myProductType.furniture)"
+                (deleteProduct)="onDeleteById($event)"
+                (changeProduct)="onChangeProduct($event)"
+                (minusProduct)="onMinusProduct($event)"
+                (plusProduct)="onPlusProduct($event)"
+            ></app-table-products>
+            <app-table-products
+                [title]="'Техника'"
+                [products]="getByType(myProductType.technics)"
+                (deleteProduct)="onDeleteById($event)"
+                (changeProduct)="onChangeProduct($event)"
+                (minusProduct)="onMinusProduct($event)"
+                (plusProduct)="onPlusProduct($event)"
+            ></app-table-products>
+            <app-table-products
+                [title]="'Книги'"
+                [products]="getByType(myProductType.books)"
+                (deleteProduct)="onDeleteById($event)"
+                (changeProduct)="onChangeProduct($event)"
+                (minusProduct)="onMinusProduct($event)"
+                (plusProduct)="onPlusProduct($event)"
+            ></app-table-products>
+            <app-table-products
+                [title]="'Телефоны'"
+                [products]="getByType(myProductType.phones)"
+                (deleteProduct)="onDeleteById($event)"
+                (changeProduct)="onChangeProduct($event)"
+                (minusProduct)="onMinusProduct($event)"
+                (plusProduct)="onPlusProduct($event)"
+            ></app-table-products>
+            <app-editform-products
+                *ngIf="showForm == true"
+                [changingProduct]="changingProduct"
+                (editProduct)="onEditProduct($event)"
+                (deleteProduct)="onDeleteById($event)"
+            >
+            </app-editform-products>
+        </div>
+    </div>
+</div>

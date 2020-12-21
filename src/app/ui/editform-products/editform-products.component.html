@@ -1,0 +1,121 @@
+<dialog>
+    <h5>Изменить товар</h5>
+    <form 
+        class="px-4 py-3"
+        method="dialog"
+        [formGroup] = "formChange"
+        [style.width]="'300px'"
+    > 
+        <div class="row">
+            <div class="col-12 mt-2">
+                <label for="InputName">Название</label>
+                <input
+                    id="InputName"
+                    class="form-control"
+                    type="text"
+                    placeholder="Название"
+                    formControlName="name"
+                />
+                <div class="error" *ngIf="((formChange.get('name').touched) && (formChange.get('name').invalid))">
+                    <span class="badge badge-pill badge-danger">Заполните поле</span>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="InputArticul">Артикул</label>
+                <input
+                    id="InputArticul"
+                    class="form-control"
+                    type="text"
+                    placeholder="Артикул"
+                    formControlName="articul"
+                />
+                <div class="error" *ngIf="((formChange.get('articul').touched) && (formChange.get('articul').invalid))">
+                    <span class="badge badge-pill badge-danger">Заполните поле</span>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="InputManufacture">Производитель</label>
+                <input
+                    id="InputManufacture"
+                    class="form-control"
+                    type="text"
+                    placeholder="Производитель"
+                    formControlName="manufacture"
+                />
+            </div>
+            <div class="col-12 mt-2">
+                <label for="SelectType">Категория</label>
+                <select
+                    id="SelectType"
+                    class="custom-select" 
+                    formControlName="type"
+                >
+                    <option [ngValue]="myProductType.furniture">Мебель</option>
+                    <option [ngValue]="myProductType.technics">Техника</option>
+                    <option [ngValue]="myProductType.books">Книги</option>
+                    <option [ngValue]="myProductType.phones">Телефоны</option>
+                </select>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="InputWeight">Вес (кг)</label>
+                <input
+                    id="InputWeight"
+                    class="form-control"
+                    type="text"
+                    placeholder="Вес (кг)"
+                    formControlName="weight"
+                />
+                <div class="error" *ngIf="((formChange.get('weight').touched) && (formChange.get('weight').invalid))">
+                    <span class="badge badge-pill badge-danger">Заполните поле</span>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="InputCost">Цена (руб)</label>
+                <input
+                    id="InputCost"
+                    class="form-control"
+                    type="text"
+                    placeholder="Цена (руб)"
+                    formControlName="cost"
+                />
+                <div class="error" *ngIf="((formChange.get('cost').touched) && (formChange.get('cost').invalid))">
+                    <span class="badge badge-pill badge-danger">Заполните поле</span>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <label for="InputAmount">Количество</label>
+                <input
+                    id="InputAmount"
+                    class="form-control"
+                    type="text"
+                    placeholder="Количество"
+                    formControlName="amount"
+                />
+                <div class="error" *ngIf="((formChange.get('amount').touched) && (formChange.get('amount').invalid))">
+                    <span class="badge badge-pill badge-danger">Заполните поле</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">    
+            <div class="col-7">
+                <button 
+                    class="btn btn-outline-primary" 
+                    [hidden]="formChange.invalid" 
+                    (click)="onEditProduct()"
+                >
+                    Принять
+                </button>
+            </div>
+            <div class="col-5">
+                <button 
+                    class="btn btn-outline-danger"
+                    [hidden]="formChange.invalid"
+                    (click)="onDeleteProduct()"
+                >
+                    Удалить
+                </button>
+            </div>
+        </div>   
+    </form>
+</dialog>
+

@@ -1,0 +1,63 @@
+<div class="row" *ngIf="products.length > 0">
+    <h5>{{  title  }}</h5>
+    <table class="table table-hover" >
+        <thead>
+            <tr>
+                <th [style.width]="'30%'">Название</th>
+                <th [style.width]="'20%'">Вес (кг)</th>
+                <th [style.width]="'20%'">Цена (руб)</th>
+                <th [style.width]="'10%'">Кол-во</th>
+                <th [style.width]="'5%'"></th>
+                <th [style.width]="'5%'"></th>
+                <th></th>
+                <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+                <td scope="row">{{  product.name  }}</td>
+                <td>{{  product.weight  }}</td>
+                <td>{{  product.cost  }}</td>
+                <td>
+                    {{  product.amount  }}
+                </td>
+                <td>
+                    <button 
+                        [style.width]="'30px'"
+                        class="btn btn-dark btn-sm"
+                        (click)="onMinusAmount(product)"
+                    >
+                        -
+                    </button>
+                </td>
+                <td>
+                    <button 
+                        [style.width]="'30px'"
+                        class="btn btn-dark btn-sm"
+                        (click)="onPlusAmount(product)"
+                    >
+                        +
+                    </button>
+                </td>
+                <td>
+                    <button 
+                        class="btn btn-outline-info btn-sm"
+                        (click)="onChangeProduct(product)"
+                    >
+                        Изменить
+                    </button>
+                </td>
+                <td>
+                    <button 
+                        class="btn btn-outline-danger btn-sm"
+                        (click)="onDeleteProduct(product.id)"
+                    >
+                        Удалить
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
